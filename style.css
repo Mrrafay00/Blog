@@ -1,0 +1,473 @@
+/* General Body and Typography */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7; /* Improved line spacing for readability */
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Neutral light background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 960px; /* Adjusted max-width for content */
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            padding: 30px;
+            margin: 25px auto;
+            border-radius: 8px; /* Slightly rounded corners */
+            display: flex;
+            flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+            box-sizing: border-box; /* Include padding in element's total width */
+        }
+
+        /* Blog Header */
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            border-bottom: 1px solid #eee; /* Subtle separator */
+            padding-bottom: 20px;
+        }
+
+        .post-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8em; /* Large and clear title */
+            color: #004085; /* Deeper blue accent */
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Slight text shadow */
+        }
+
+        .post-meta {
+            font-size: 0.95em;
+            color: #666;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        /* Featured Image */
+        .featured-image {
+            width: 100%;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .featured-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px; /* More rounded corners */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+        }
+
+        .featured-image figcaption {
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* Main Content Area (for flex layout of content and sidebar) */
+        .main-content-area {
+            display: flex;
+            flex-wrap: wrap; /* Allows content and sidebar to wrap */
+            width: 100%;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            flex: 3; /* Takes up more space than sidebar */
+            padding-right: 30px; /* Space between content and sidebar */
+            box-sizing: border-box;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.2em; /* More spacing between paragraphs */
+            font-size: 1.05em; /* Slightly larger base font size */
+            text-align: justify;
+            color: #444;
+        }
+
+        .blog-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #004085;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 2em; /* Larger heading for main sections */
+            border-bottom: 2px solid #e0e0e0; /* Underline effect */
+            padding-bottom: 10px;
+        }
+
+        .blog-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0056b3; /* Lighter accent for subheadings */
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin-left: 25px; /* Indent lists */
+            margin-bottom: 25px;
+        }
+
+        .blog-content li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Social Share Buttons */
+        .social-share {
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .social-share h3 {
+            color: #555;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .share-button {
+            display: inline-flex; /* Use flex for centering icon */
+            align-items: center;
+            justify-content: center;
+            width: 50px; /* Larger buttons */
+            height: 50px;
+            margin: 0 10px;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            font-size: 1.3em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .share-button.linkedin { background-color: #0077b5; }
+        .share-button.facebook { background-color: #3b5998; }
+        .share-button.twitter { background-color: #1DA1F2; }
+
+        .share-button:hover {
+            transform: translateY(-5px); /* More pronounced lift effect */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+        }
+
+        /* Scroll-to-Top Button */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 1000; /* High z-index to be on top */
+            border: none;
+            outline: none;
+            background-color: #007bff; /* Primary accent color */
+            color: white;
+            cursor: pointer;
+            padding: 18px; /* Larger padding */
+            border-radius: 50%;
+            font-size: 1.3em; /* Larger icon */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Clearer shadow */
+            transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #0056b3; /* Darker accent on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        /* Optional Sidebar */
+        .sidebar {
+            flex: 1; /* Takes up 1 part of the available space */
+            padding-left: 30px; /* Space from main content */
+            box-sizing: border-box;
+            border-left: 1px solid #eee; /* Separator */
+            margin-left: 30px; /* Margin to separate visually */
+        }
+
+        .sidebar h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #004085;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.6em; /* Slightly larger sidebar headings */
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .search-bar {
+            margin-bottom: 30px;
+        }
+
+        .search-bar input[type="text"] {
+            width: calc(100% - 75px); /* Adjust width for button */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .search-bar button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 0.95em;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+            transform: scale(1.02);
+        }
+
+        .recent-posts ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recent-posts li {
+            margin-bottom: 12px;
+        }
+
+        .recent-posts a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+            font-size: 1.0em;
+        }
+
+        .recent-posts a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Optional Comment Section */
+        .comment-section {
+            width: 100%;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .comment-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #004085;
+            margin-bottom: 25px;
+            font-size: 2em; /* Matches other main headings */
+        }
+
+        .comment-form .form-group { /* Added .comment-form to make it specific */
+            margin-bottom: 20px;
+        }
+
+        .comment-form .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .comment-form .form-group input[type="text"],
+        .comment-form .form-group input[type="email"], /* Added email type */
+        .comment-form .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding in element's total width */
+            font-size: 1em;
+        }
+
+        .comment-form .form-group textarea {
+            resize: vertical; /* Allow vertical resizing */
+            min-height: 100px;
+        }
+
+        .comment-section button[type="submit"] {
+            background-color: #28a745; /* Green accent for submit */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .comment-section button[type="submit"]:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Comments List Styling */
+        .comments-list {
+            margin-bottom: 40px;
+        }
+
+        .comment-item {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .comment-item h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #0056b3;
+            font-size: 1.1em;
+        }
+
+        .comment-item p {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .comment-item small {
+            color: #888;
+            font-size: 0.8em;
+            display: block;
+            text-align: right;
+        }
+
+        /* Responsive Design */
+        /* Extra small devices (portrait phones, less than 576px) */
+        @media (max-width: 575.98px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+            .post-title {
+                font-size: 1.8em;
+            }
+            .blog-content p {
+                font-size: 0.9em;
+            }
+            .blog-content h2 {
+                font-size: 1.5em;
+            }
+            .blog-content h3 {
+                font-size: 1.2em;
+            }
+            .social-share .share-button {
+                width: 40px;
+                height: 40px;
+                font-size: 1em;
+                margin: 0 5px;
+            }
+            #scrollToTopBtn {
+                bottom: 15px;
+                right: 15px;
+                padding: 10px;
+                font-size: 1em;
+            }
+        }
+
+        /* Small devices (landscape phones, 576px and up) - Mobile Landscape */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .container {
+                padding: 20px;
+                margin: 15px auto;
+            }
+            .post-title {
+                font-size: 2.2em;
+            }
+            .blog-content p {
+                font-size: 0.95em;
+            }
+            .blog-content h2 {
+                font-size: 1.7em;
+            }
+            .blog-content h3 {
+                font-size: 1.3em;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) - Tablet Portrait */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .container {
+                flex-direction: column; /* Stack main content and sidebar vertically */
+                padding: 25px;
+                margin: 20px auto;
+            }
+            .main-content-area {
+                flex-direction: column;
+            }
+            .blog-content {
+                padding-right: 0;
+                width: 100%;
+            }
+            .sidebar {
+                padding-left: 0;
+                margin-left: 0;
+                border-left: none;
+                border-top: 1px solid #eee;
+                margin-top: 40px;
+                padding-top: 30px;
+                width: 100%;
+            }
+            .post-title {
+                font-size: 2.5em;
+            }
+            .blog-content h2 {
+                font-size: 2em;
+            }
+            .blog-content h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) - Laptop/Desktop */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .container {
+                padding: 30px;
+                max-width: 960px; /* Standard large screen width */
+            }
+            .blog-content {
+                padding-right: 30px;
+            }
+            .sidebar {
+                padding-left: 30px;
+                margin-left: 30px;
+                border-left: 1px solid #eee;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) - Large Desktop/PC */
+        @media (min-width: 1200px) {
+            .container {
+                padding: 30px;
+                max-width: 1140px; /* Larger max-width for very large screens */
+            }
+            .blog-content {
+                padding-right: 40px; /* More space on very large screens */
+            }
+            .sidebar {
+                padding-left: 40px; /* More space on very large screens */
+                margin-left: 40px;
+            }
+            .post-title {
+                font-size: 3.2em;
+            }
+            .blog-content h2 {
+                font-size: 2.2em;
+            }
+        }
